@@ -1,6 +1,6 @@
 {
-  "name": "ddf--iea--energy",
-  "title": "ddf--iea--energy",
+  "name": "test",
+  "title": "test",
   "description": "",
   "version": "0.0.1",
   "language": {
@@ -27,6 +27,9 @@
           },
           {
             "name": "unit"
+          },
+          {
+            "name": "domain"
           }
         ],
         "primaryKey": "concept"
@@ -349,6 +352,15 @@
           "concept"
         ],
         "value": "concept_type",
+        "resources": [
+          "ddf--concepts"
+        ]
+      },
+      {
+        "primaryKey": [
+          "concept"
+        ],
+        "value": "domain",
         "resources": [
           "ddf--concepts"
         ]
