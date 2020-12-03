@@ -1,0 +1,377 @@
+{
+  "name": "ddf--iea--energy",
+  "title": "ddf--iea--energy",
+  "description": "",
+  "version": "0.0.1",
+  "language": {
+    "id": "en",
+    "name": "English"
+  },
+  "translations": [],
+  "license": "",
+  "author": "",
+  "resources": [
+    {
+      "path": "ddf--concepts.csv",
+      "name": "ddf--concepts",
+      "schema": {
+        "fields": [
+          {
+            "name": "concept"
+          },
+          {
+            "name": "name"
+          },
+          {
+            "name": "concept_type"
+          },
+          {
+            "name": "unit"
+          }
+        ],
+        "primaryKey": "concept"
+      }
+    },
+    {
+      "path": "ddf--datapoints--value--by--geo-africa--product--flow--year.csv",
+      "name": "value--by--geo-africa--product--flow--year",
+      "schema": {
+        "fields": [
+          {
+            "name": "geo",
+            "constraints": {
+              "enum": [
+                "africa"
+              ]
+            }
+          },
+          {
+            "name": "flow"
+          },
+          {
+            "name": "product"
+          },
+          {
+            "name": "year"
+          },
+          {
+            "name": "value"
+          }
+        ],
+        "primaryKey": [
+          "geo",
+          "product",
+          "flow",
+          "year"
+        ]
+      }
+    },
+    {
+      "path": "ddf--datapoints--value--by--geo-brazil--product--flow--year.csv",
+      "name": "value--by--geo-brazil--product--flow--year",
+      "schema": {
+        "fields": [
+          {
+            "name": "geo",
+            "constraints": {
+              "enum": [
+                "brazil"
+              ]
+            }
+          },
+          {
+            "name": "flow"
+          },
+          {
+            "name": "product"
+          },
+          {
+            "name": "year"
+          },
+          {
+            "name": "value"
+          }
+        ],
+        "primaryKey": [
+          "geo",
+          "product",
+          "flow",
+          "year"
+        ]
+      }
+    },
+    {
+      "path": "ddf--datapoints--value--by--geo-people_s_republic_of_china--product--flow--year.csv",
+      "name": "value--by--geo-people_s_republic_of_china--product--flow--year",
+      "schema": {
+        "fields": [
+          {
+            "name": "geo",
+            "constraints": {
+              "enum": [
+                "people_s_republic_of_china"
+              ]
+            }
+          },
+          {
+            "name": "flow"
+          },
+          {
+            "name": "product"
+          },
+          {
+            "name": "year"
+          },
+          {
+            "name": "value"
+          }
+        ],
+        "primaryKey": [
+          "geo",
+          "product",
+          "flow",
+          "year"
+        ]
+      }
+    },
+    {
+      "path": "ddf--datapoints--value--by--geo-sweden--product--flow--year.csv",
+      "name": "value--by--geo-sweden--product--flow--year",
+      "schema": {
+        "fields": [
+          {
+            "name": "geo",
+            "constraints": {
+              "enum": [
+                "sweden"
+              ]
+            }
+          },
+          {
+            "name": "flow"
+          },
+          {
+            "name": "product"
+          },
+          {
+            "name": "year"
+          },
+          {
+            "name": "value"
+          }
+        ],
+        "primaryKey": [
+          "geo",
+          "product",
+          "flow",
+          "year"
+        ]
+      }
+    },
+    {
+      "path": "ddf--datapoints--value--by--geo-united_states--product--flow--year.csv",
+      "name": "value--by--geo-united_states--product--flow--year",
+      "schema": {
+        "fields": [
+          {
+            "name": "geo",
+            "constraints": {
+              "enum": [
+                "united_states"
+              ]
+            }
+          },
+          {
+            "name": "flow"
+          },
+          {
+            "name": "product"
+          },
+          {
+            "name": "year"
+          },
+          {
+            "name": "value"
+          }
+        ],
+        "primaryKey": [
+          "geo",
+          "product",
+          "flow",
+          "year"
+        ]
+      }
+    },
+    {
+      "path": "ddf--datapoints--value--by--geo-world--product--flow--year.csv",
+      "name": "value--by--geo-world--product--flow--year",
+      "schema": {
+        "fields": [
+          {
+            "name": "geo",
+            "constraints": {
+              "enum": [
+                "world"
+              ]
+            }
+          },
+          {
+            "name": "flow"
+          },
+          {
+            "name": "product"
+          },
+          {
+            "name": "year"
+          },
+          {
+            "name": "value"
+          }
+        ],
+        "primaryKey": [
+          "geo",
+          "product",
+          "flow",
+          "year"
+        ]
+      }
+    },
+    {
+      "path": "ddf--entities--flow.csv",
+      "name": "flow",
+      "schema": {
+        "fields": [
+          {
+            "name": "flow"
+          },
+          {
+            "name": "name"
+          },
+          {
+            "name": "parent"
+          }
+        ],
+        "primaryKey": "flow"
+      }
+    },
+    {
+      "path": "ddf--entities--geo.csv",
+      "name": "geo",
+      "schema": {
+        "fields": [
+          {
+            "name": "name"
+          },
+          {
+            "name": "geo"
+          }
+        ],
+        "primaryKey": "geo"
+      }
+    },
+    {
+      "path": "ddf--entities--product.csv",
+      "name": "product",
+      "schema": {
+        "fields": [
+          {
+            "name": "name"
+          },
+          {
+            "name": "product"
+          }
+        ],
+        "primaryKey": "product"
+      }
+    }
+  ],
+  "ddfSchema": {
+    "datapoints": [
+      {
+        "primaryKey": [
+          "flow",
+          "geo",
+          "product",
+          "year"
+        ],
+        "value": "value",
+        "resources": [
+          "value--by--geo-africa--product--flow--year",
+          "value--by--geo-brazil--product--flow--year",
+          "value--by--geo-people_s_republic_of_china--product--flow--year",
+          "value--by--geo-sweden--product--flow--year",
+          "value--by--geo-united_states--product--flow--year",
+          "value--by--geo-world--product--flow--year"
+        ]
+      }
+    ],
+    "entities": [
+      {
+        "primaryKey": [
+          "flow"
+        ],
+        "value": "name",
+        "resources": [
+          "flow"
+        ]
+      },
+      {
+        "primaryKey": [
+          "flow"
+        ],
+        "value": "parent",
+        "resources": [
+          "flow"
+        ]
+      },
+      {
+        "primaryKey": [
+          "geo"
+        ],
+        "value": "name",
+        "resources": [
+          "geo"
+        ]
+      },
+      {
+        "primaryKey": [
+          "product"
+        ],
+        "value": "name",
+        "resources": [
+          "product"
+        ]
+      }
+    ],
+    "concepts": [
+      {
+        "primaryKey": [
+          "concept"
+        ],
+        "value": "concept_type",
+        "resources": [
+          "ddf--concepts"
+        ]
+      },
+      {
+        "primaryKey": [
+          "concept"
+        ],
+        "value": "name",
+        "resources": [
+          "ddf--concepts"
+        ]
+      },
+      {
+        "primaryKey": [
+          "concept"
+        ],
+        "value": "unit",
+        "resources": [
+          "ddf--concepts"
+        ]
+      }
+    ],
+    "synonyms": []
+  }
+}

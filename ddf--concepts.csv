@@ -1,0 +1,9 @@
+concept,name,concept_type,unit
+name,Name,string,
+year,Year,time,
+geo,Geo,entity_domain,
+value,Value,measure,ktoe
+unit,Unit,string,
+parent,Parent,string,
+product,Product,entity_domain,
+flow,Flow,entity_domain,
